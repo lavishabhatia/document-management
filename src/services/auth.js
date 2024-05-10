@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL } from "./constant";
+import { BASE_URL } from "./constant.js";
 
 export const requestOtp = async (data) => {
   try {
