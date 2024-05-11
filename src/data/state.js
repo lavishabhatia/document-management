@@ -7,4 +7,5 @@ export const state = proxy({
 
   // Modal
   uploadFile:false,
+  createTag:false,
 });

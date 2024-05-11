@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Dashboard from "./component/dashboard/Dashboard";
 import MainPage from "./pages/MainPage";
+import Tags from "./component/tag/Tags";
 
 const App = () => {
   return (
@@ -16,8 +17,9 @@ const App = () => {
           <Route path="" element={<Login />} />
           <Route path="verify" element={<OtpPage />} />
         </Route>
-        <Route path="/dashboard" element={<MainPage />}>
-          <Route path="" element={<Dashboard />} />
+        <Route path="" element={<MainPage />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/tag" element={<Tags />} />
         </Route>
       </Routes>
       <ToastContainer />

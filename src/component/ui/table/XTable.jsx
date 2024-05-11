@@ -9,19 +9,19 @@ export const XTable = ({ children }) => {
   
   export const THead = ({ children }) => {
     return (
-      <thead className=" border-y text-[#64748B] text-[14px] py-2">
+      <thead className=" border-y text-[#64748B] text-[14px] ">
         {children}
       </thead>
     );
   };
   
   export const TR = ({ children }) => {
-    return <tr   className=" border-b hover:bg-gray-100">{children}</tr>;
+    return <tr   className=" border-b hover:bg-gray-100 py-3">{children}</tr>;
   };
   
   export const TH = ({ children }) => {
     return (
-      <th scope="col" className="tableHeading">
+      <th scope="col" className="tableHeading text-left py-2">
         {children}
       </th>
     );

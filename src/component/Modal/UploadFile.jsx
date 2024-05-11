@@ -20,22 +20,7 @@ const schema = yup.object().shape({
   document_date: yup.string().required(reqMsg),
   document_remarks: yup.string().required(reqMsg),
   tags: yup.string().required(reqMsg),
-  // file: yup
-  //   .mixed()
-  //   .test(
-  //     "fileSize",
-  //     "File size is too large",
-  //     (value) => value && value[0] && value[0].size <= 1024 * 1024 * 10 // 10MB
-  //   )
-  //   .test(
-  //     "fileFormat",
-  //     "Unsupported file format",
-  //     (value) =>
-  //       value &&
-  //       value[0] &&
-  //       ["image/jpeg", "image/png", "image/webp"].includes(value[0].type)
-  //   )
-  //   .required(reqMsg),
+ 
 });
 
 const UploadFile = () => {

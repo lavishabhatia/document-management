@@ -10,7 +10,7 @@ const TagsTable = () => {
 
   const dashboardData = async () => {
     try {
-      let res = await uploadTag(search);
+      let res = await uploadTag({ term: "" });
       if (res?.status === 200) {
         setTagTableData(res?.data?.data);
       }
@@ -25,7 +25,7 @@ const TagsTable = () => {
 
   return (
     <div className="flex flex-col my-5 gap-4">
-      <Searchbar search={search} setSearch={setSearch} action={dashboardData} />
+      {/* <Searchbar search={search} setSearch={setSearch} action={dashboardData} /> */}
 
       <div className="w-full">
         <div className="flex flex-col">
@@ -42,8 +42,12 @@ const TagsTable = () => {
                   <TBody>
                     {tagTableData?.map((data, i) => (
                       <TR key={i}>
-                        <TD>{data?.id}</TD>
-                        <TD>{data?.label}</TD>
+                        <TD className={""}>{i + 1}</TD>
+                        <TD
+                          className={"px-2 py-0.5 text-[#7a4a20] font-semibold"}
+                        >
+                          {data?.label}
+                        </TD>
                       </TR>
                     ))}
                   </TBody>

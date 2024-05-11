@@ -1,11 +1,11 @@
 import React from "react";
 import { FiPlus } from "react-icons/fi";
 import { state } from "../../data/state";
-import DashboardTable from "./DashboardTable";
+import TagsTable from "./TagsTable";
 
 const Tags = () => {
   const openModal = () => {
-    state.uploadFile = true;
+    state.createTag = true;
   };
 
   return (
@@ -19,10 +19,10 @@ const Tags = () => {
           className="bg-[#b47035] rounded-md py-1.5 px-3 text-white text-md font-normal flex gap-3 items-center justify-center"
         >
           <FiPlus />
-          Upload
+          Tag
         </button>
       </div>
-      <DashboardTable />
+      <TagsTable />
     </div>
   );
 };
