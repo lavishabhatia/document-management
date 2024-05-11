@@ -7,11 +7,12 @@ import { ToastContainer } from "react-toastify";
 import LoginHeader from "../component/ui/LoginHeader";
 import { state } from "../data/state.js";
 import { getHeader } from "../services/constant.js";
+import UploadFile from "../component/Modal/UploadFile.jsx";
 
 const MainPage = () => {
   const snap = useSnapshot(state);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     if (getHeader()) {
       state.isLoggedIn = true;
@@ -24,8 +25,9 @@ const MainPage = () => {
         <LoginHeader />
         <div className="w-full">
           <Outlet />
+          {snap.uploadFile ? <UploadFile /> : null}
         </div>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
       </div>
     </>
   );
