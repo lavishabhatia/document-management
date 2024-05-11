@@ -3,7 +3,7 @@ import { FiPlus } from "react-icons/fi";
 import { state } from "../../data/state";
 import DashboardTable from "./DashboardTable";
 
-const DashboardCard = () => {
+const Tags = () => {
   const openModal = () => {
     state.uploadFile = true;
   };
@@ -27,4 +27,4 @@ const DashboardCard = () => {
   );
 };
 
-export default DashboardCard;
+export default Tags;

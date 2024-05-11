@@ -21,7 +21,7 @@ function OtpPage() {
       let response = await verifyOtp(data);
       if (response?.status === 200) {
         localStorage.setItem("token", response?.data?.data?.token);
-        state.resellerToken = response?.data?.data?.token;
+        state.token = response?.data?.data?.token;
         state.userInfo = response?.data?.data;
         successAlert("Welcome!");
         navigate("/dashboard");

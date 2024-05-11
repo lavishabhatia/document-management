@@ -11,6 +11,7 @@ const Dashboard = () => {
       <div className="w-[83vw]">
         <DashboardCard />
       </div>
+      
     </div>
   );
 };

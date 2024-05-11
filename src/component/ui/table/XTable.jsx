@@ -9,7 +9,7 @@ export const XTable = ({ children }) => {
   
   export const THead = ({ children }) => {
     return (
-      <thead className=" border-y text-[#64748B] text-[14px]">
+      <thead className=" border-y text-[#64748B] text-[14px] py-2">
         {children}
       </thead>
     );

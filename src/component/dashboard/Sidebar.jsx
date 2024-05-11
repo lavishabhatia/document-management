@@ -1,16 +1,14 @@
 import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
+import { IoPricetagsOutline } from "react-icons/io5";
 
 const SideBar = () => {
   const sideBarData = [
     { title: "Dashboard", Icon: <AiOutlineHome className="w-7 h-7" /> },
-    { title: "Offers" },
-    { title: "Broadcast" },
-    { title: "Customers" },
-    { title: "Profile" },
+    { title: "Tag", Icon: <IoPricetagsOutline className="w-7 h-7" /> },
   ];
   return (
-    <div className="flex flex-col w-full h-screen p-4">
+    <div className="flex flex-col w-full h-screen p-4 mt-4 gap-3">
       {sideBarData?.map((data, i) => {
         return (
           <div className="flex gap-5 w-full cursor-pointer mt-4 px-3" key={i}>

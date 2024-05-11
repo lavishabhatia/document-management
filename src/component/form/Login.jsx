@@ -9,6 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useSnapshot } from "valtio";
 import { state } from "../../data/state";
 import { successAlert } from "../../enum/toast";
+import { getHeader } from "../../services/constant";
 
 const schema = yup.object().shape({
   phone: yup
@@ -42,6 +43,12 @@ function Login() {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/dashboard");
+    }
+  }, [snap.token]);
 
   return (
     <>
